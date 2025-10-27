@@ -2,7 +2,7 @@
 {block name=main}
 
     <div class="col>
-        <!--div class=" p-3 bg-light border rounded"-->
+        <!--div class=" p-3 bg-light border rounded">
 
     <div class="card">
         <div class="card-header bg-primary text-white">
@@ -10,9 +10,9 @@
         </div>
         <div class="card-body">
 
-            <form class="row g-3" method="post" action="upload.php" enctype="multipart/form-data">
+            <form class="row g-3" method="post" action="adm_arquivo.php" enctype="multipart/form-data">
                 <div class="col-md-6">
-                    <label for="nome_original" class="form-label">Nome original</label>
+                    <label for="nome_original" class="form-label">Nome</label>
                     <input type="text" class="form-control" id="nome_original" name="nome_original" required>
                 </div>
 
@@ -114,8 +114,7 @@
                 <td>{$dado->descricao}</td>
                 <td>{$dado->publico}</td>
                 <td>
-                    <a href="/arquivo/update" class="btn btn-warning btn-sm">Editar</a>
-                    <a href="/arquivo/excluir" class="btn btn-danger btn-sm"
+                    <a href="/adm_arquivo.php?oper=del&valor={$dado->id}" class="btn btn-danger btn-sm"
                         onclick="return confirm('Tem certeza que deseja excluir este usuário?')">Excluir</a>
                         </td>
                     </tr>

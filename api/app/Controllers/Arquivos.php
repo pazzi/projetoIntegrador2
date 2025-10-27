@@ -17,6 +17,7 @@ class Arquivos extends ResourceController
 
     public function upload()
     {
+    /*
         $file = $this->request->getFile('arquivo');
         $descricao = $this->request->getPost('descricao');
         $publico = $this->request->getPost('publico');
@@ -37,13 +38,15 @@ class Arquivos extends ResourceController
                 'publico' => $publico,
                 'usuario_upload_id' => $usuarioUploadId
             ];
-
+*/
+	    $data = $this->request->getJSON();
             $this->arquivoModel->insert($data);
-
+/*
             return $this->response->setJSON(['message' => 'Arquivo enviado com sucesso']);
         } else {
             return $this->response->setStatusCode(400, 'Erro no upload do arquivo');
         }
+        */
     }
 
     public function list()
@@ -70,7 +73,7 @@ class Arquivos extends ResourceController
         }
 
         // Deleta o arquivo do sistema de arquivos
-        unlink(WRITEPATH . 'uploads/' . $arquivo['nome_armazenamento']);
+        //unlink(WRITEPATH . 'uploads/' . $arquivo['nome_armazenamento']);
 
         $this->arquivoModel->delete($id);
         return $this->response->setJSON(['message' => 'Arquivo deletado com sucesso']);

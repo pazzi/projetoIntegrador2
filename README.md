@@ -1,4 +1,3 @@
 # Univesp - Projeto Integrador 2
 
-FRONT-END
-
+Trabalho entregue na disciplina

@@ -1,0 +1,23 @@
+Parte administrativa
+session.php
+	inicio.php
+			cadastro.php [novo]
+			inicio.php[excluir]
+			alterar.php[alterar]
+			
+		municipios.php [link]
+			cad_municipio.php[novo]
+			municipios.php[excluir]
+			alterar_municipio.php[alterar]
+			
+			
+Parte Publica
+
+index.php
+	mostra_cursos.php
+	
+index_cidade.php
+	mostra_cidade.php
+
+			
+		
